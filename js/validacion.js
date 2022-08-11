@@ -13,7 +13,8 @@ boton.addEventListener("click", () => {
     for (por_cada of todo) {
         if (por_cada.value.length !== 0) {
             showAlertSuccess();
-        } else {
+        }
+         if (por_cada.value.length == 0){
             showAlertError();
         }
     }
