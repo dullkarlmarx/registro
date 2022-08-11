@@ -10,11 +10,11 @@ const todo = document.getElementsByClassName("form-control")
 
 let boton = document.getElementById("regBtn");
 boton.addEventListener("click", () => {
-    for (por_cada of todo) {
+    for (i = 0; i < por_cada.length; i++) {
         if (por_cada.value.length !== 0) {
             showAlertSuccess();
         }
-         if (por_cada.value.length == 0){
+        if (por_cada.value.length == 0) {
             showAlertError();
         }
     }
