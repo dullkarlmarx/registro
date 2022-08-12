@@ -7,10 +7,10 @@ function showAlertError() {
 }
 const todo = document.getElementsByClassName("form-control")
 
-
+/*
 let boton = document.getElementById("regBtn");
 boton.addEventListener("click", () => {
-    for (i = 0; i < todo.length; i++) {
+    for (var i=0; i < todo.length; i++) {
         if (por_cada.value.length !== 0) {
             showAlertSuccess();
         }
@@ -18,5 +18,18 @@ boton.addEventListener("click", () => {
             showAlertError();
         }
     }
+}); */
+let boton = document.getElementById("regBtn");
+boton.addEventListener("click", () => {
+    let cantCompletas = 0;
+    for (por_cada of todo) {
+        if (por_cada.value.length != 0) {
+            cantCompletas += 1;
+        }
+    }
+    if (cantCompletas == 5) {
+        showAlertSuccess();
+    } else {
+        showAlertError();
+    }
 });
-
