@@ -23,6 +23,7 @@ let boton = document.getElementById("regBtn");
 boton.addEventListener("click", () => {
     let cantCompletas = 0;
     for (por_cada of todo) {
+        
         if (por_cada.value.length != 0) {
             cantCompletas += 1;
         }
