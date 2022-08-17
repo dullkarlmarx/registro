@@ -6,8 +6,8 @@ function alertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 const todo = document.getElementsByClassName("form-control");
-const pw1 = document.getElementById("password1");
-const pw2 = document.getElementById("password2");
+const pw1 = document.getElementById("password1").value;
+const pw2 = document.getElementById("password2").value;
 const terminos = document.getElementById("terminos");
 let boton = document.getElementById("regBtn");
 
@@ -22,9 +22,9 @@ boton.addEventListener("click", () => {
 
     if (cantCompletas !== 5) {
         alertError();
-    } else if (pw1.value !== pw2.value)
+    } else if (pw1 !== pw2)
         alertError();
-    else if (pw1.value.lenght < 6)
+    else if (pw1.lenght < 6)
         alertError();
     else if (terminos.checked !== true)
         alertError();
