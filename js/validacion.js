@@ -19,10 +19,9 @@ boton.addEventListener("click", () => {
             cantCompletas += 1;
         }
     }
-    
+
     if (cantCompletas !== 5) {
         alertError();
-
     } else if (pw1 !== pw2)
         alertError();
     else if (pw1.value.lenght < 6)
