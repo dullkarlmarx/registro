@@ -24,7 +24,7 @@ boton.addEventListener("click", () => {
 
     } else if (pw1 !== pw2)
         alertError();
-    else if (pw1.lenght !== 6)
+    else if (pw1.value.lenght < 6)
         alertError();
     else if (terminos.checked !== true)
         alertError();
