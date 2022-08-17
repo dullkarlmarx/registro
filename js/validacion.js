@@ -1,34 +1,19 @@
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alertSuccess = () => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-        `<div class="alert alert-success alert-dismissible" role="alert" id="alert-success">`,
-        `    <p>Datos guardados correctamente</p>`,
-        `    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`,
-        `</div>`
-    ].join('')
-
-    alertPlaceholder.append(wrapper)
+function showAlertSuccess() {
+    document.getElementById("alert-success").classList.add("show");
 }
 
-const alertError = () => {
-    const wrapper = document.createElement('div')
-    wrapper.innerHTML = [
-        `<div class="alert alert-danger alert-dismissible" role="alert" id="alert-danger">`,
-        `    <p>Los datos ingresados no cumplen con los requisitos solicitados</p>`,
-        '    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-        '</div>'
-    ].join('')
-    alertPlaceholder.append(wrapper)
+function showAlertError() {
+    document.getElementById("alert-danger").classList.add("show");
 }
-const todo = document.getElementsByClassName("form-control")
-
+const todo = document.getElementsByClassName("form-control");
+const pw1 = document.getElementById("password1");
+const pw2 = document.getElementById("password2");
+const terminos = document.getElementById("terminos");
 let boton = document.getElementById("regBtn");
 boton.addEventListener("click", () => {
     let cantCompletas = 0;
     for (por_cada of todo) {
-        
+
         if (por_cada.value.length != 0) {
             cantCompletas += 1;
         }
@@ -41,3 +26,26 @@ boton.addEventListener("click", () => {
 
     }
 });
+function matchPassword() {
+    if (pw1 != pw2) {
+        alertError();
+    } else {
+        alertSuccess();
+    }
+}
+
+function lengthPassword() {
+    if (pw1.length != 6) {
+        alertError();
+    } else {
+        alertSuccess();
+    }
+}
+function checkedCheckbox() {
+    if (terminos.checked = true) {
+        alertSuccess();
+    } else {
+        alertError();
+    }
+
+}
