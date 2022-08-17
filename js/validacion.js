@@ -19,34 +19,41 @@ boton.addEventListener("click", () => {
             cantCompletas += 1;
         }
     }
-    if (cantCompletas == 5) {
-        alertSuccess();
-
-    } else {
+    if (cantCompletas !== 5) {
         alertError();
 
-    }
-    function matchPassword() {
-        if (pw1 != pw2) {
-            alertError();
-        } else {
-            alertSuccess();
-        }
-    }
-    
-    function lengthPassword() {
-        if (pw1.length != 6) {
-            alertError();
-        } else {
-            alertSuccess();
-        }
-    }
-    function checkedCheckbox() {
-        if (terminos.checked = true) {
-            alertSuccess();
-        } else {
-            alertError();
-        }
-    
+    } else if (pw1 !== pw2)
+        alertError();
+    else if (pw1.lenght !== 6)
+        alertError();
+    else if (terminos.checked !== true)
+        alertError();
+    else {
+        alertSuccess();
     }
 });
+   /* function matchPassword() {
+     if (pw1 != pw2) {
+         alertError();
+     } else {
+         alertSuccess();
+     }
+ }
+ 
+ function lengthPassword() {
+     if (pw1.length != 6) {
+         alertError();
+     } else {
+         alertSuccess();
+     }
+ }
+ function checkedCheckbox() {
+     if (terminos.checked = true) {
+         alertSuccess();
+     } else {
+         alertError();
+     }
+ 
+ }
+});
+*/
