@@ -10,6 +10,7 @@ const pw1 = document.getElementById("password1");
 const pw2 = document.getElementById("password2");
 const terminos = document.getElementById("terminos");
 let boton = document.getElementById("regBtn");
+
 boton.addEventListener("click", () => {
     let cantCompletas = 0;
     for (por_cada of todo) {
@@ -25,27 +26,27 @@ boton.addEventListener("click", () => {
         showAlertError();
 
     }
+    function matchPassword() {
+        if (pw1 != pw2) {
+            alertError();
+        } else {
+            alertSuccess();
+        }
+    }
+    
+    function lengthPassword() {
+        if (pw1.length != 6) {
+            alertError();
+        } else {
+            alertSuccess();
+        }
+    }
+    function checkedCheckbox() {
+        if (terminos.checked = true) {
+            alertSuccess();
+        } else {
+            alertError();
+        }
+    
+    }
 });
-function matchPassword() {
-    if (pw1 != pw2) {
-        showAlertError();
-    } else {
-        showAlertSuccess();
-    }
-}
-
-function lengthPassword() {
-    if (pw1.length != 6) {
-        showAlertError();
-    } else {
-        showAlertSuccess();
-    }
-}
-function checkedCheckbox() {
-    if (terminos.checked = true) {
-        showAlertSuccess();
-    } else {
-        showAlertError();
-    }
-
-}
