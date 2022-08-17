@@ -19,6 +19,7 @@ boton.addEventListener("click", () => {
             cantCompletas += 1;
         }
     }
+    
     if (cantCompletas !== 5) {
         alertError();
 
