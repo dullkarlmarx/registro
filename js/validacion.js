@@ -22,7 +22,7 @@ boton.addEventListener("click", () => {
 
     if (cantCompletas !== 5) {
         alertError();
-    } else if (pw1 !== pw2)
+    } else if (pw1.value !== pw2.value)
         alertError();
     else if (pw1.value.lenght < 6)
         alertError();
