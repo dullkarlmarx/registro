@@ -19,33 +19,33 @@ boton.addEventListener("click", () => {
         }
     }
     if (cantCompletas == 5) {
-        alertSuccess();
+        showAlertSuccess();
 
     } else {
-        alertError();
+        showAlertError();
 
     }
 });
 function matchPassword() {
     if (pw1 != pw2) {
-        alertError();
+        showAlertError();
     } else {
-        alertSuccess();
+        showAlertSuccess();
     }
 }
 
 function lengthPassword() {
     if (pw1.length != 6) {
-        alertError();
+        showAlertError();
     } else {
-        alertSuccess();
+        showAlertSuccess();
     }
 }
 function checkedCheckbox() {
     if (terminos.checked = true) {
-        alertSuccess();
+        showAlertSuccess();
     } else {
-        alertError();
+        showAlertError();
     }
 
 }
