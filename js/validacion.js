@@ -1,8 +1,8 @@
-function showAlertSuccess() {
+function alertSuccess() {
     document.getElementById("alert-success").classList.add("show");
 }
 
-function showAlertError() {
+function alertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 const todo = document.getElementsByClassName("form-control");
@@ -20,10 +20,10 @@ boton.addEventListener("click", () => {
         }
     }
     if (cantCompletas == 5) {
-        showAlertSuccess();
+        alertSuccess();
 
     } else {
-        showAlertError();
+        alertError();
 
     }
     function matchPassword() {
